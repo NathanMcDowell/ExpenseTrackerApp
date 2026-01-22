@@ -6,8 +6,13 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
 
-        Entry testEntry = new Entry();
-        System.out.print("$");
-        System.out.println(testEntry.GetCost());
+        Tracker tracker = new Tracker();
+        // Entry testEntry = new Entry();
+        // System.out.print("$");
+        // System.out.println(testEntry.GetCost());
+
+        tracker.AddEntry();
+        tracker.DisplayEntries();
+        
     }
 }
