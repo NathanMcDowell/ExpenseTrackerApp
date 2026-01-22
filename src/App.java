@@ -19,36 +19,41 @@ public class App {
         // tracker.DisplayCategories();
         boolean done = false;
         do{
-            int userChoiceInt = menu.DisplayMenu();
-            switch (userChoiceInt) {
-                case 1: // Add Entry
-                    tracker.AddEntry();
-                    break;
+            try{
+                int userChoiceInt = Integer.parseInt(menu.DisplayMenu());
             
-                case 2: // View Entries
-                    tracker.DisplayEntries();
-                    break;
-            
-                case 3: // Save to File
-                    System.out.println("Under construction- Save to file");
-                    break;
-            
-                case 4: // Read from File
-                    System.out.println("Under construction- Read from file");
-                    break;
-            
-                case 5: // Add Category
-                    tracker.AddCategory();
-                    break;
-            
-                case 6: // Quit
-                    System.out.println("Have a good day!");
-                    done = true;
-                    break;
-            
-                default:
-                    System.out.println("Input a valid option:");
-                    break;
+                switch (userChoiceInt) {
+                    case 1: // Add Entry
+                        tracker.AddEntry();
+                        break;
+                
+                    case 2: // View Entries
+                        tracker.DisplayEntries();
+                        break;
+                
+                    case 3: // Save to File
+                        System.out.println("Under construction- Save to file");
+                        break;
+                
+                    case 4: // Read from File
+                        System.out.println("Under construction- Read from file");
+                        break;
+                
+                    case 5: // Add Category
+                        tracker.AddCategory();
+                        break;
+                
+                    case 6: // Quit
+                        System.out.println("Have a good day!");
+                        done = true;
+                        break;
+                
+                    default:
+                        System.out.println("Input a valid option:");
+                        break;
+                    }
+            } catch (NumberFormatException e){
+                System.out.println("Input a valid option: ");
             }
         }while(!done);
         

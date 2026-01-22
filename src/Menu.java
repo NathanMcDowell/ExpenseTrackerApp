@@ -12,12 +12,12 @@ public class Menu {
     "5. Add Category",
     "6. Quit"};
 
-    public int DisplayMenu(){
+    public String DisplayMenu(){
         System.out.println("Pick an option:");
         for (String string : _menuStrings) {
             System.out.println(string);
         }
-        int userChoiceInt = Integer.parseInt(scanner.nextLine());
-        return userChoiceInt;
+        String userChoiceString = scanner.nextLine();
+        return userChoiceString;
     }
 }
