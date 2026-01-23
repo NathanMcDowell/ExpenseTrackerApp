@@ -47,7 +47,7 @@ public class Tracker
             System.out.println(String.format("%s: $%.2f", entry.GetCategory(), entry.GetCost()));
         }
         System.out.println("Press enter to return to menu");
-        String blank = scanner.nextLine();
+        scanner.nextLine();
         for (int i = 0; i < 20; i++) {System.out.println();}
     }
     public void DisplayCategories(){
