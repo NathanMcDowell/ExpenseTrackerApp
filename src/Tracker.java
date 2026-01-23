@@ -13,12 +13,29 @@ public class Tracker
     }
 
     public void AddEntry(){
-        System.out.println("How much did you spend? ");
-        float cost = Float.parseFloat(scanner.nextLine());
-        System.out.println("Category? ");
-        String category = scanner.nextLine();
-        Entry newEntry = new Entry(cost, category);
-        _entries.add(newEntry);
+        boolean costDone = false;
+        float cost = 0;
+        while (!costDone) {
+            try{
+                System.out.println("How much did you spend? ");
+                cost = Float.parseFloat(scanner.nextLine());
+                costDone = true;
+            } catch(NumberFormatException e){
+                System.out.println("Input a valid option: ");
+            }
+            try{
+                System.out.println("Category? ");
+                DisplayCategories();
+                Integer categoryIndex = Integer.parseInt(scanner.nextLine());
+                Entry newEntry = new Entry(cost, _categories.get(categoryIndex-1));
+                _entries.add(newEntry);
+            } catch(NumberFormatException e){
+                System.out.println("Input a valid number: ");
+            }catch (IndexOutOfBoundsException e) {
+                System.out.println("Choice out of range");
+            }
+        }
+        
     }
     public void AddCategory(){
         DisplayCategories();
@@ -29,6 +46,9 @@ public class Tracker
         for (Entry entry : _entries) {
             System.out.println(String.format("%s: $%.2f", entry.GetCategory(), entry.GetCost()));
         }
+        System.out.println("Press enter to return to menu");
+        String blank = scanner.nextLine();
+        for (int i = 0; i < 20; i++) {System.out.println();}
     }
     public void DisplayCategories(){
         int i = 1;
