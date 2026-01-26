@@ -14,6 +14,7 @@ public class Tracker
 
     public void AddEntry(){
         boolean costDone = false;
+        boolean catDone = false;
         float cost = 0;
         while (!costDone) {
             try{
@@ -23,18 +24,22 @@ public class Tracker
             } catch(NumberFormatException e){
                 System.out.println("Input a valid option: ");
             }
+        }
+        while (!catDone) {
             try{
                 System.out.println("Category? ");
                 DisplayCategories();
                 Integer categoryIndex = Integer.parseInt(scanner.nextLine());
                 Entry newEntry = new Entry(cost, _categories.get(categoryIndex-1));
                 _entries.add(newEntry);
+                catDone = true;
             } catch(NumberFormatException e){
                 System.out.println("Input a valid number: ");
             }catch (IndexOutOfBoundsException e) {
                 System.out.println("Choice out of range");
             }
         }
+        
         
     }
     public void AddCategory(){
