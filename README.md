@@ -1,18 +1,39 @@
-## Getting Started
+# Expense Tracker App
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This project is a tracker for expenses. Every time you spend money, you put in the amount you spent and the category you spent it on.
 
-## Folder Structure
+## Instructions for Build and Use
 
-The workspace contains two folders by default, where:
+Steps to build and/or run the software:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+1. You run the software in the console.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Instructions for using the software:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+1. Every time you need to add an entry, type "1" for "Add Entry" and follow the prompts.
+2. To view all previous expenses, type "2" for "View Entries."
+3. If you need to add a category that isn't in the system already, type "5" for "Add Category."
 
-## Dependency Management
+## Development Environment
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+To recreate the development environment, you need the following software and/or libraries with the specified versions:
+
+* You just need Java.
+*
+*
+
+## Useful Websites to Learn More
+
+I found these websites useful in developing this software:
+
+* W3 Schools
+*
+*
+
+## Future Work
+
+The following items I plan to fix, improve, and/or add to this project in the future:
+
+* [ ] Allow for things to be removed from the tracker.
+* [ ] Set up for the data to be stored in a file, or taken from a file.
+* [ ] Add functionality to show more information than just previous events. Maybe average spending, or spendings for each category.
